@@ -20,6 +20,9 @@
 		D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87222A6E91E0001045D /* HelperFuctions.swift */; };
 		D950F87522A6F64F0001045D /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */; };
 		D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */; };
+		D9CB4FC222A7D9FB00A67C1E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FC122A7D9FB00A67C1E /* UserTableViewCell.swift */; };
+		D9CB4FC722A7F1B000A67C1E /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */; };
+		D9CB4FC922A812B200A67C1E /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FC822A812B200A67C1E /* ChatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D950F87222A6E91E0001045D /* HelperFuctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuctions.swift; sourceTree = "<group>"; };
 		D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D9CB4FC122A7D9FB00A67C1E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		D9CB4FC822A812B200A67C1E /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		D950F85422A3D25E0001045D /* Imessenger */ = {
 			isa = PBXGroup;
 			children = (
+				D9CB4FC322A7EEDC00A67C1E /* custom cells */,
 				D950F87622A6F6A40001045D /* Helpers */,
 				D950F86A22A6CD980001045D /* GoogleService-Info.plist */,
 				D950F86922A3D2C10001045D /* ViewController */,
@@ -118,6 +125,8 @@
 				D950F85522A3D25E0001045D /* AppDelegate.swift */,
 				D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */,
 				D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */,
+				D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */,
+				D9CB4FC822A812B200A67C1E /* ChatsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +140,14 @@
 				D950F87222A6E91E0001045D /* HelperFuctions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D9CB4FC322A7EEDC00A67C1E /* custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB4FC122A7D9FB00A67C1E /* UserTableViewCell.swift */,
+			);
+			path = "custom cells";
 			sourceTree = "<group>";
 		};
 		F16FA1D6C9EFF573EDF939BB /* Frameworks */ = {
@@ -299,12 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D950F86D22A6E0FF0001045D /* FUser.swift in Sources */,
+				D9CB4FC222A7D9FB00A67C1E /* UserTableViewCell.swift in Sources */,
 				D950F85822A3D25E0001045D /* WelcomeViewController.swift in Sources */,
 				D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */,
 				D950F87122A6E7FC0001045D /* FCollectionReference.swift in Sources */,
 				D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */,
+				D9CB4FC922A812B200A67C1E /* ChatsViewController.swift in Sources */,
 				D950F85622A3D25E0001045D /* AppDelegate.swift in Sources */,
 				D950F87522A6F64F0001045D /* FinishRegistrationViewController.swift in Sources */,
+				D9CB4FC722A7F1B000A67C1E /* UsersTableViewController.swift in Sources */,
 				D950F86F22A6E1720001045D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

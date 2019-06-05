@@ -255,35 +255,27 @@
             </objects>
             <point key="canvasLocation" x="247" y="114"/>
         </scene>
-        <!--Call-->
+        <!--Chats-->
         <scene sceneID="Jjc-Of-olT">
             <objects>
-                <viewController id="b7v-aS-GxI" sceneMemberID="viewController">
+                <viewController id="b7v-aS-GxI" customClass="ChatsViewController" customModule="Imessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PN-sl-5Dv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we are in the app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-gt-ktd">
-                                <rect key="frame" x="122" y="20" width="131" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ybC-gt-ktd" firstAttribute="leading" secondItem="z2E-eg-ZtP" secondAttribute="leading" constant="122" id="40K-Wc-aNN"/>
-                            <constraint firstItem="ybC-gt-ktd" firstAttribute="top" secondItem="z2E-eg-ZtP" secondAttribute="top" id="Ex1-vT-yPI"/>
-                            <constraint firstItem="z2E-eg-ZtP" firstAttribute="bottom" secondItem="ybC-gt-ktd" secondAttribute="bottom" constant="577" id="llF-Qb-nC9"/>
-                            <constraint firstItem="z2E-eg-ZtP" firstAttribute="trailing" secondItem="ybC-gt-ktd" secondAttribute="trailing" constant="122" id="ssN-Xs-EcU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="z2E-eg-ZtP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Call" image="call" id="Npx-ic-Qfh"/>
+                    <navigationItem key="navigationItem" title="Chats" id="f4e-l2-BtW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Pvx-WI-ioT">
+                            <connections>
+                                <action selector="createNewChatButtonPressed:" destination="b7v-aS-GxI" id="ZEL-kC-HNH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9I-Zv-JnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816.8" y="-172.26386806596702"/>
+            <point key="canvasLocation" x="2756" y="-172.26386806596702"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="isy-ob-HHw">
@@ -295,13 +287,95 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="b7v-aS-GxI" kind="relationship" relationship="viewControllers" id="aUi-wQ-shI"/>
+                        <segue destination="t5R-zI-Lvm" kind="relationship" relationship="viewControllers" id="aUi-wQ-shI"/>
                         <segue destination="P77-DX-tf4" kind="relationship" relationship="viewControllers" id="Lz2-uz-5hs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsH-0q-sYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="994" y="114"/>
+        </scene>
+        <!--Users Table View Controller-->
+        <scene sceneID="cmm-bu-V7G">
+            <objects>
+                <tableViewController storyboardIdentifier="userTableView" id="vra-Wr-nSy" customClass="UsersTableViewController" customModule="Imessenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aOa-pn-YZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="yrh-af-T5G">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rDz-S9-XKs">
+                                    <rect key="frame" x="8" y="8" width="359" height="29"/>
+                                    <segments>
+                                        <segment title="My City"/>
+                                        <segment title="My Country"/>
+                                        <segment title="All"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="filterSegmentedValueChanged:" destination="vra-Wr-nSy" eventType="valueChanged" id="gPt-cp-uws"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="rDz-S9-XKs" firstAttribute="leading" secondItem="yrh-af-T5G" secondAttribute="leading" constant="8" id="lAf-ht-oE8"/>
+                                <constraint firstAttribute="trailing" secondItem="rDz-S9-XKs" secondAttribute="trailing" constant="8" id="mIo-IE-vCr"/>
+                                <constraint firstItem="rDz-S9-XKs" firstAttribute="centerX" secondItem="yrh-af-T5G" secondAttribute="centerX" id="oE6-vU-wMQ"/>
+                                <constraint firstItem="rDz-S9-XKs" firstAttribute="centerY" secondItem="yrh-af-T5G" secondAttribute="centerY" id="tXj-iB-sHr"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="Rqp-08-ni8" customClass="UserTableViewCell" customModule="Imessenger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rqp-08-ni8" id="rc4-Qb-6qH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-Gt-U4d">
+                                            <rect key="frame" x="76" y="30" width="291" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-ZC-NdQ">
+                                            <rect key="frame" x="8" y="15" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="LZn-kz-QDa"/>
+                                                <constraint firstAttribute="width" constant="50" id="WGo-hB-cE1"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NzG-Gt-U4d" firstAttribute="centerY" secondItem="rc4-Qb-6qH" secondAttribute="centerY" id="5AB-EQ-owR"/>
+                                        <constraint firstItem="NzG-Gt-U4d" firstAttribute="leading" secondItem="YgL-ZC-NdQ" secondAttribute="trailing" constant="18" id="kxk-Gf-yvw"/>
+                                        <constraint firstItem="NzG-Gt-U4d" firstAttribute="trailing" secondItem="rc4-Qb-6qH" secondAttribute="trailingMargin" constant="8" id="mRI-WM-8JN"/>
+                                        <constraint firstItem="YgL-ZC-NdQ" firstAttribute="centerY" secondItem="rc4-Qb-6qH" secondAttribute="centerY" id="sQ9-Cp-ws5"/>
+                                        <constraint firstItem="YgL-ZC-NdQ" firstAttribute="leading" secondItem="rc4-Qb-6qH" secondAttribute="leading" constant="8" id="sd1-8a-o0V"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="YgL-ZC-NdQ" id="IU4-Tn-EhV"/>
+                                    <outlet property="fullNameLabel" destination="NzG-Gt-U4d" id="MX3-gZ-g3A"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vra-Wr-nSy" id="mpD-CF-eV6"/>
+                            <outlet property="delegate" destination="vra-Wr-nSy" id="clC-8d-gIg"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="headerView" destination="yrh-af-T5G" id="3lD-Kh-Gnc"/>
+                        <outlet property="segmentedController" destination="rDz-S9-XKs" id="Tbg-Gc-Lwc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tau-Kb-a3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3884" y="-172.26386806596702"/>
         </scene>
         <!--Settings-->
         <scene sceneID="sZS-Tm-KeK">
@@ -386,10 +460,29 @@
             </objects>
             <point key="canvasLocation" x="1828" y="542.87856071964018"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="YMs-6t-uqV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t5R-zI-Lvm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat" id="Npx-ic-Qfh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cxV-5V-we1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b7v-aS-GxI" kind="relationship" relationship="rootViewController" id="s76-CE-s6G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcN-5k-qH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.8" y="-172.26386806596702"/>
+        </scene>
     </scenes>
     <resources>
         <image name="avatarPlaceholder" width="101" height="101"/>
-        <image name="call" width="30" height="30"/>
+        <image name="chat" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
     </resources>
 </document>
