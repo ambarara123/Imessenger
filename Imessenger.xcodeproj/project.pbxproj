@@ -19,6 +19,7 @@
 		D950F87122A6E7FC0001045D /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87022A6E7FC0001045D /* FCollectionReference.swift */; };
 		D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87222A6E91E0001045D /* HelperFuctions.swift */; };
 		D950F87522A6F64F0001045D /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */; };
+		D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D950F87022A6E7FC0001045D /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		D950F87222A6E91E0001045D /* HelperFuctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuctions.swift; sourceTree = "<group>"; };
 		D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D950F85722A3D25E0001045D /* WelcomeViewController.swift */,
 				D950F85522A3D25E0001045D /* AppDelegate.swift */,
 				D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */,
+				D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				D950F85822A3D25E0001045D /* WelcomeViewController.swift in Sources */,
 				D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */,
 				D950F87122A6E7FC0001045D /* FCollectionReference.swift in Sources */,
+				D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */,
 				D950F85622A3D25E0001045D /* AppDelegate.swift in Sources */,
 				D950F87522A6F64F0001045D /* FinishRegistrationViewController.swift in Sources */,
 				D950F86F22A6E1720001045D /* Constants.swift in Sources */,
