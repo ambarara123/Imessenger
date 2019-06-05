@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>283864168156-hso96u59stj4t1meb0mkgtq3ffhnj7ni.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.283864168156-hso96u59stj4t1meb0mkgtq3ffhnj7ni</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>283864168156-ojj3og65g9loe268smhfmmgj4ikndo72.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBeDNg8EFcteu5AUHB5sZ-ho9gqQVJQWiU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>283864168156</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.iotdroid.Imessenger</string>
+	<key>PROJECT_ID</key>
+	<string>chatter-7c2d9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatter-7c2d9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:283864168156:ios:121fa0979b39808c</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatter-7c2d9.firebaseio.com</string>
+</dict>
+</plist>
