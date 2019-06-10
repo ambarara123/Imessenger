@@ -15,9 +15,9 @@ class ChatsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -27,6 +27,7 @@ class ChatsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
     @IBAction func createNewChatButtonPressed(_ sender: Any) {
         let userVC = UIStoryboard.init(name: "Main", bundle: nil)
@@ -35,4 +36,5 @@ class ChatsViewController: UIViewController {
         self.navigationController?.pushViewController(userVC, animated: true)
         
     }
+    
 }

@@ -116,6 +116,8 @@ class WelcomeViewController: UIViewController {
             let vc = segue.destination as! FinishRegistrationViewController
             vc.email = emailTextField.text!
             vc.password = passwordTextField.text!
+            
+            
         }
     }
     

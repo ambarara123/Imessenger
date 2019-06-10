@@ -14,6 +14,7 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
     
 
     @IBOutlet weak var headerView: UIView!
+    
     @IBOutlet weak var segmentedController: UISegmentedControl!
     
     var allUsers : [FUser] = []
@@ -27,6 +28,17 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Users"
+        navigationItem.largeTitleDisplayMode = .never
+        
+        tableView.tableFooterView = UIView()
+        
+        navigationItem.searchController = searchController
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
 
         loadUsers(filter: kCITY)
    
@@ -36,12 +48,23 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        if searchController.isActive && searchController.searchBar.text != ""{
+            return 1 
+        }else{
+            return allUsersGrouped.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allUsers.count
+        if searchController.isActive && searchController.searchBar.text != ""{
+            return filteredUser.count
+        }else{
+            let sectionTitle = self.sectionTitleList[section]
+        
+        let users = self.allUsersGrouped[sectionTitle]
+            return users!.count
+        }
     }
     
     //MARK: IBActions
@@ -63,12 +86,44 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserTableViewCell
+        
+        var user : FUser
+        
+         if searchController.isActive && searchController.searchBar.text != ""{
+        user = filteredUser[indexPath.row]
+         }else{
+            let sectionTitle = self.sectionTitleList[indexPath.section]
+            
+            let users = self.allUsersGrouped[sectionTitle]
+            
+            user = users![indexPath.row]
+        }
+        
 
         // Configure the cell...
         cell.generateCellWith(fuser: allUsers[indexPath.row], indexPath: indexPath)
         
-
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         if searchController.isActive && searchController.searchBar.text != ""{
+            return ""
+         }else{
+            return sectionTitleList[section]
+        }
+    }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+         if searchController.isActive && searchController.searchBar.text != ""{
+         return nil
+         }else{
+            return self.sectionTitleList
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index
     }
     
     
@@ -113,6 +168,8 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
                     }
                 }
                 //split to groups
+                self.splitDataIntoSections()
+                self.tableView.reloadData()
             }
             
             self.tableView.reloadData()
@@ -135,5 +192,32 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        ProgressHUD.dismiss()
+        
+    }
+    
+    //MARK: Helper function
+    fileprivate func splitDataIntoSections(){
+        var sectionTitle : String = ""
+        for i in 0..<self.allUsers.count{
+            let currentUser = self.allUsers[i]
+            
+            let firstCharacter = currentUser.firstname.first!
+            
+            let firstCharString = "\(firstCharacter)"
+            
+            if firstCharString != sectionTitle{
+                sectionTitle = firstCharString
+                
+                self.allUsersGrouped[sectionTitle] = []
+                
+                self.sectionTitleList.append(sectionTitle)
+            }
+            
+            self.allUsersGrouped[firstCharString]?.append(currentUser)
+        }
+    }
 
+    
 }
