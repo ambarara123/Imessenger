@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26625953DB1290C7654F85F7 /* Pods_Imessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4649488437EA4FE6FF4CA2D /* Pods_Imessenger.framework */; };
+		D94AD1AE22BE038D00D2B137 /* recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94AD1AD22BE038D00D2B137 /* recents.swift */; };
 		D950F85622A3D25E0001045D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F85522A3D25E0001045D /* AppDelegate.swift */; };
 		D950F85822A3D25E0001045D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F85722A3D25E0001045D /* WelcomeViewController.swift */; };
 		D950F85B22A3D25E0001045D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D950F85922A3D25E0001045D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		D950F87122A6E7FC0001045D /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87022A6E7FC0001045D /* FCollectionReference.swift */; };
 		D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87222A6E91E0001045D /* HelperFuctions.swift */; };
 		D950F87522A6F64F0001045D /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */; };
+		D98D94DE22AE3795004C9DE2 /* ProfileViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94DD22AE3795004C9DE2 /* ProfileViewTableViewController.swift */; };
 		D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */; };
 		D9CB4FC222A7D9FB00A67C1E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FC122A7D9FB00A67C1E /* UserTableViewCell.swift */; };
 		D9CB4FC722A7F1B000A67C1E /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */; };
@@ -29,6 +31,7 @@
 		597CB80900C487317BF32C0D /* Pods-Imessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Imessenger.release.xcconfig"; path = "Target Support Files/Pods-Imessenger/Pods-Imessenger.release.xcconfig"; sourceTree = "<group>"; };
 		78B5C924B32F39A70BBF2C18 /* Pods-Imessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Imessenger.debug.xcconfig"; path = "Target Support Files/Pods-Imessenger/Pods-Imessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		D4649488437EA4FE6FF4CA2D /* Pods_Imessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Imessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94AD1AD22BE038D00D2B137 /* recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recents.swift; sourceTree = "<group>"; };
 		D950F85222A3D25E0001045D /* Imessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D950F85522A3D25E0001045D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D950F85722A3D25E0001045D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		D950F87022A6E7FC0001045D /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		D950F87222A6E91E0001045D /* HelperFuctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFuctions.swift; sourceTree = "<group>"; };
 		D950F87422A6F64F0001045D /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		D98D94DD22AE3795004C9DE2 /* ProfileViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewController.swift; sourceTree = "<group>"; };
 		D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D9CB4FC122A7D9FB00A67C1E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				D9CB4FBD22A7C17100A67C1E /* SettingsTableViewController.swift */,
 				D9CB4FC622A7F1B000A67C1E /* UsersTableViewController.swift */,
 				D9CB4FC822A812B200A67C1E /* ChatsViewController.swift */,
+				D98D94DD22AE3795004C9DE2 /* ProfileViewTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D950F86C22A6E0FF0001045D /* FUser.swift */,
+				D94AD1AD22BE038D00D2B137 /* recents.swift */,
 				D950F86E22A6E1720001045D /* Constants.swift */,
 				D950F87022A6E7FC0001045D /* FCollectionReference.swift */,
 				D950F87222A6E91E0001045D /* HelperFuctions.swift */,
@@ -317,7 +323,9 @@
 			files = (
 				D950F86D22A6E0FF0001045D /* FUser.swift in Sources */,
 				D9CB4FC222A7D9FB00A67C1E /* UserTableViewCell.swift in Sources */,
+				D98D94DE22AE3795004C9DE2 /* ProfileViewTableViewController.swift in Sources */,
 				D950F85822A3D25E0001045D /* WelcomeViewController.swift in Sources */,
+				D94AD1AE22BE038D00D2B137 /* recents.swift in Sources */,
 				D950F87322A6E91E0001045D /* HelperFuctions.swift in Sources */,
 				D950F87122A6E7FC0001045D /* FCollectionReference.swift in Sources */,
 				D9CB4FBE22A7C17100A67C1E /* SettingsTableViewController.swift in Sources */,

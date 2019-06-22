@@ -8,11 +8,15 @@
 //
 
 import UIKit
-
+protocol UserTableViewCellDelegate {
+    func didTapAvatarImage(indexPath : IndexPath)
+}
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
+    
+    var delegate : UserTableViewCellDelegate?
     
     var indexPath : IndexPath!
     var tagGesture = UITapGestureRecognizer()
@@ -48,5 +52,6 @@ class UserTableViewCell: UITableViewCell {
     
     @objc func avatarTap(){
         print("tap on avatar \(indexPath)")
+        delegate!.didTapAvatarImage(indexPath: indexPath)
     }
 }
